@@ -6,11 +6,6 @@ export default function Greeting() {
   const greeting = useSelector((state) => state.greeting);
   const dispatch = useDispatch();
 
-
-  useEffect(() => {
-    dispatch(getGreeting());
-  });
-
   return (
     <div>
       <h1>{greeting.message}</h1>
