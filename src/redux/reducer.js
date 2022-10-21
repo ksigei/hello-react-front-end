@@ -26,5 +26,3 @@ reducers: {},
 });
 
 export default greetingSlice.reducer;
-
-

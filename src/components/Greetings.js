@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getGreeting } from "../redux/reducer";
 
 export default function Greeting() {
-  const dispatch = useDispatch();
   const greeting = useSelector((state) => state.greeting);
+  const dispatch = useDispatch();
 
+
+  useEffect(() => {
+    dispatch(getGreeting());
+  });
 
   return (
     <div>
